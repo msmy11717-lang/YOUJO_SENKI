@@ -1,0 +1,208 @@
+/* 幼女戦記2期 解説ノート 共通スタイル */
+
+:root {
+  --bg: #faf9f7;
+  --bg-alt: #ffffff;
+  --text: #1e1e1f;
+  --text-muted: #5a5a5f;
+  --border: #e3e0da;
+  --accent: #8a5a2c;
+  --link: #6f4a1f;
+  --real-bg: #e8f0f7;
+  --real-text: #1f4e79;
+  --real-border: #b7d2e8;
+  --fiction-bg: #f3e9f7;
+  --fiction-text: #6a3b82;
+  --fiction-border: #ddc2e8;
+  --code-bg: #efece6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1a18;
+    --bg-alt: #242220;
+    --text: #ece8e1;
+    --text-muted: #b3ada2;
+    --border: #3a3733;
+    --accent: #d9a66c;
+    --link: #e8be8a;
+    --real-bg: #17293a;
+    --real-text: #a9cdea;
+    --real-border: #2b4a63;
+    --fiction-bg: #2e2035;
+    --fiction-text: #dcb8ea;
+    --fiction-border: #4d3a58;
+    --code-bg: #2b2925;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: #faf9f7;
+  --bg-alt: #ffffff;
+  --text: #1e1e1f;
+  --text-muted: #5a5a5f;
+  --border: #e3e0da;
+  --accent: #8a5a2c;
+  --link: #6f4a1f;
+  --real-bg: #e8f0f7;
+  --real-text: #1f4e79;
+  --real-border: #b7d2e8;
+  --fiction-bg: #f3e9f7;
+  --fiction-text: #6a3b82;
+  --fiction-border: #ddc2e8;
+  --code-bg: #efece6;
+}
+
+:root[data-theme="dark"] {
+  --bg: #1b1a18;
+  --bg-alt: #242220;
+  --text: #ece8e1;
+  --text-muted: #b3ada2;
+  --border: #3a3733;
+  --accent: #d9a66c;
+  --link: #e8be8a;
+  --real-bg: #17293a;
+  --real-text: #a9cdea;
+  --real-border: #2b4a63;
+  --fiction-bg: #2e2035;
+  --fiction-text: #dcb8ea;
+  --fiction-border: #4d3a58;
+  --code-bg: #2b2925;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Yu Gothic", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  line-height: 1.8;
+}
+
+.page {
+  max-width: 780px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--accent);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2.5rem;
+  color: var(--accent);
+}
+
+h3 {
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+}
+
+nav.crumbs {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+nav.crumbs a { color: var(--text-muted); }
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+a:hover { text-decoration: underline; }
+
+.tag {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  margin-bottom: 0.4rem;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.tag-real {
+  background: var(--real-bg);
+  color: var(--real-text);
+  border-color: var(--real-border);
+}
+
+.tag-fiction {
+  background: var(--fiction-bg);
+  color: var(--fiction-text);
+  border-color: var(--fiction-border);
+}
+
+.entry {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.entry-title {
+  font-weight: 700;
+  font-size: 1.02rem;
+  margin: 0.2rem 0 0.5rem;
+}
+
+.entry p { margin: 0.4rem 0; }
+
+.entry .note {
+  color: var(--text-muted);
+  font-size: 0.92rem;
+}
+
+ul.ep-list {
+  list-style: none;
+  padding: 0;
+}
+
+ul.ep-list li {
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+ul.ep-list .ep-num {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 0.6rem;
+}
+
+.hub-links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.hub-links a {
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  color: var(--text);
+  font-weight: 600;
+}
+.hub-links a:hover { border-color: var(--accent); text-decoration: none; }
+
+code {
+  background: var(--code-bg);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.empty-note {
+  color: var(--text-muted);
+  font-style: italic;
+}
